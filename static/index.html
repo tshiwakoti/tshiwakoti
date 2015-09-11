@@ -25,15 +25,15 @@
 
       .when('/contact', {
         templateUrl : './partials/contact.html'
-      });
+      })
 
-      // .when('/education', {
-      //   templateUrl : './partials/education.html'
-      // });
+      .when('/work', {
+        templateUrl : './partials/work.html'
+      })
 
-      // .when('/work', {
-      //   templateUrl : './partials/work.html'
-      // });
+      .when('/education', {
+        templateUrl : './partials/education.html'
+      })
 
     });
 
@@ -50,6 +50,7 @@
       height: 250px;
       border: 1px solid;
       background-color: blue;
+      text-align: center;
     }
 
     #sidenav{
@@ -64,13 +65,30 @@
       vertical-align: top;
     }
 
+    #linkimage{
+      width:50px;
+      height: 50px;
+    }
+    #linkimage img {
+    width: 100%;
+    height: auto;
+    }
+
+    #logo1, #logo2{
+      display: inline-block;
+    }
+
+
+
     </style>
   </head>
 
   <body>
 
     <div id = "sidenav">
+
       <div id = "image">
+        <h5> IMAGE HERE </h5>
       </div>
 
       <h5> <a href="#/">Portfolio </h5>
@@ -78,6 +96,11 @@
       <h5> <a href="#/about">  About Me </a> </h5>
       <h5> <a href="#/work"> Work Experiences </h5>
       <h5> <a href="#/education"> Education </h5>
+
+      <div id = "linkimage">
+      <a id="logo1" href = "https://github.com/tshiwakoti" > <img src = "/images/Octocat.png"> </a>
+      <a id="logo2" href = "https://www.linkedin.com/profile/view?id=AAIAAApJjCIBsK7Mlf9kbBxCwV7Qte49FObfRbs&trk=nav_responsive_tab_profile" > <img src = "/images/linkedin.png"> </a>
+      </div>
     </div>
 
     <div id = "main" ng-view="">
